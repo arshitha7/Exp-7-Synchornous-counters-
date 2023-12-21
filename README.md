@@ -79,7 +79,18 @@ endmodule
 
 ```
 #### Down Counter
-
+```
+module exp_5__df(clk,A);
+input clk;
+output reg [2:0]A;
+always @(posedge clk)
+begin
+	A[2]=(((~A[0])&(~A[1]))^A[2]);
+	A[1]=(~A[0])^A[1];
+	A[0]=1^A[0];
+end 
+endmodule
+```
 
 
  
@@ -119,11 +130,10 @@ endmodule
 ### TRUTH TABLE 
 
 #### Up Counter
-![image](https://github.com/arshitha7/Exp-7-Synchornous-counters-/assets/144979143/6049809d-c19b-465a-b6af-76a2dbf6dc7f)
+![image](https://github.com/arshitha7/Exp-7-Synchornous-counters-/assets/144979143/764d284f-fe0f-4a18-96ee-8c21ab01d148)
 
 #### Down Counter
-![image](https://github.com/arshitha7/Exp-7-Synchornous-counters-/assets/144979143/a081a8cd-cea8-457f-bff2-412b92fc814b)
-
+![image](https://github.com/arshitha7/Exp-7-Synchornous-counters-/assets/144979143/569c5ef1-f196-46f2-b01b-a8efe3f36ce9)
 
 
 
