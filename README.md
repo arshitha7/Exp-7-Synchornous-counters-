@@ -80,16 +80,17 @@ endmodule
 ```
 #### Down Counter
 ```
-module exp_5__df(clk,A);
+module down_c(clk,A);
 input clk;
 output reg [2:0]A;
 always @(posedge clk)
 begin
-	A[2]=(((~A[0])&(~A[1]))^A[2]);
-	A[1]=(~A[0])^A[1];
-	A[0]=1^A[0];
-end 
+A[2]=(((~A[0])&(~A[1]))^A[2]);
+A[1]=(~A[0])^A[1];
+A[0]=~A[0]^1;
+end
 endmodule
+
 ```
 
 
